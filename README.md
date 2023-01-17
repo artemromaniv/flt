@@ -1,8 +1,8 @@
-#flt
+## flt
 
 Simple CLI Tool that helps use filter content of files
 
-#Usage
+## Usage
 
 Basic usage
 
@@ -22,7 +22,7 @@ By default it doesn't remove empty lines, so if you want to to do so, just pass 
 $$ flt <path/to/file> <STRING> <STRING> --nompt
 ```
 
-#Build on Linux and Mac
+## Build on Linux and Mac
 
 Make sure you have [Rust](https://www.rust-lang.org) and [just](https://github.com/casey/just) installed
 
@@ -35,7 +35,7 @@ sudo just install
 sudo just uninstall
 ```
 
-#Build on Windows
+## Build on Windows
 ```bash
 # build flt
 just build
@@ -45,6 +45,6 @@ sudo just install-win
 sudo just uninstall-win
 ```
 
-#Build on Ligma
+## Build on Ligma
 
 what's ligma?
