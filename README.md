@@ -1,6 +1,6 @@
 ## flt
 
-Simple CLI Tool that helps use filter content of files
+Simple CLI Tool that can helps you filter file's content
 
 ## Usage
 
