@@ -19,7 +19,13 @@ flt <path/to/file> <STRING> <STRING>
 By default it doesn't remove empty lines, so if you want to to do so, just pass --nompt argument which stands for "No empty"
 
 ```bash
-flt <path/to/file> <STRING> <STRING> --nompt
+flt <path/to/file> <STRING> --nompt
+```
+
+Also, by default it creates a backup copy of your file before filtering it, if you want to disable it, just add --drop parameter
+
+```bash
+flt <path/to/file> <STRING> --drop
 ```
 
 ## Build on Linux and Mac
