@@ -13,13 +13,13 @@ flt <path/to/file> <STRING>
 Need more than one string? No problem!
 
 ```bash
-$$ flt <path/to/file> <STRING> <STRING>
+flt <path/to/file> <STRING> <STRING>
 ```
 
 By default it doesn't remove empty lines, so if you want to to do so, just pass --nompt argument which stands for "No empty"
 
 ```bash
-$$ flt <path/to/file> <STRING> <STRING> --nompt
+flt <path/to/file> <STRING> <STRING> --nompt
 ```
 
 ## Build on Linux and Mac
@@ -29,8 +29,10 @@ Make sure you have [Rust](https://www.rust-lang.org) and [just](https://github.c
 ```bash
 # build flt
 just build
+
 #install
 sudo just install
+
 #uninstall
 sudo just uninstall
 ```
@@ -39,8 +41,10 @@ sudo just uninstall
 ```bash
 # build flt
 just build
+
 #install
 sudo just install-win
+
 #uninstall
 sudo just uninstall-win
 ```
