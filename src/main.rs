@@ -7,11 +7,13 @@ fn main() {
 
     // Check for --help flag
     if args.contains(&"--help".to_string()) {
-        println!("Usage: flt [file_path] <strings_to_remove>");
-        println!("");
-        println!("Flags: ");
-        println!("--drop disables creating backup of file before filtering");
-        println!("--nompt removes empty lines from your file");
+        println!(
+            "Usage: flt [file_path] <strings_to_remove>\n
+Flags:\n
+--drop\t\tdisables creating backup of file before filtering\n 
+--nompt\t\tremoves empty lines from your file"
+        );
+
         return;
     }
 
@@ -24,7 +26,6 @@ fn main() {
     let file_path = config.file_path;
 
     let strings_to_remove = config.query;
-
 
     // Flags
 
