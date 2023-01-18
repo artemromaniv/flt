@@ -2,9 +2,10 @@ use std::env;
 use std::fs;
 
 fn main() {
-    // Get the command line arguments for the file path, specified strings and --drop flag
+    // Get the command line arguments for the file path, specified strings and flags
     let args: Vec<String> = env::args().collect();
     let file_path = &args[1];
+
     let strings_to_remove: Vec<&str> = args[2..args
         .iter()
         .position(|x| x == "--drop")
@@ -12,7 +13,12 @@ fn main() {
         .iter()
         .map(|x| x.as_str())
         .collect();
+
+    // Flags
+    
     let create_backup = !args.contains(&"--drop".to_string());
+
+    let remove_empty_lines = args.contains(&"--nompt".to_string());
 
     // Read the contents of the .txt file
     let file_contents = fs::read_to_string(file_path).expect("Error reading file");
@@ -29,6 +35,10 @@ fn main() {
     let new_lines: Vec<&str> = lines
         .into_iter()
         .filter(|x| !strings_to_remove.iter().any(|y| x.contains(y)))
+        .filter(|x| {
+            !strings_to_remove.iter().any(|y| x.contains(y))
+                && (!remove_empty_lines || x.trim() != "")
+        })
         .collect();
 
     // Join the remaining lines into a single string
